@@ -5,7 +5,7 @@ library(ggthemes)
 library(gridExtra)
 library(plyr)
 
-setwd("/The Little Dataset/serial")
+setwd("raw_data")
 total <- read.csv('total1.csv')
 total <- ddply(total, .(Episode), transform, pos = cumsum(Percent) - (0.5 * Percent))
 
